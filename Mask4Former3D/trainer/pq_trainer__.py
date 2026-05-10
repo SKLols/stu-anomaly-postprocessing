@@ -32,8 +32,8 @@ class PanopticSegmentation(pl.LightningModule):
         # var_dict  = np.load("/media/ubuntu22/HDD22T/_Sourabh/stu_dataset/Mask4Former3D/validate_stats/pointcloud_var.npy", allow_pickle=True).item()
         
         #Load dictionary from .npy (confid logic during stats)
-        mean_dict = np.load("/media/ubuntu22/HDD22T/_Sourabh/stu_dataset/Mask4Former3D/train_stats_frames_50_class_means.npy", allow_pickle=True).item()
-        var_dict  = np.load("/media/ubuntu22/HDD22T/_Sourabh/stu_dataset/Mask4Former3D/train_stats_frames_50_class_vars.npy", allow_pickle=True).item()
+        #mean_dict = np.load("/media/ubuntu22/HDD22T/_Sourabh/stu_dataset/Mask4Former3D/train_stats_frames_50_class_means.npy", allow_pickle=True).item()
+        #var_dict  = np.load("/media/ubuntu22/HDD22T/_Sourabh/stu_dataset/Mask4Former3D/train_stats_frames_50_class_vars.npy", allow_pickle=True).item()
 
         # #Load dictionary from .npy (confid logic during stats)
         # mean_dict_no_inv = np.load("/media/ubuntu22/HDD22T/_Sourabh/stu_dataset/class_means_test_19_v9.npy", allow_pickle=True).item()
@@ -48,8 +48,8 @@ class PanopticSegmentation(pl.LightningModule):
         
         
         # Convert to tensors in the correct order
-        self.class_mean = torch.tensor(list(mean_dict.values())).float().to(self.device)
-        self.class_var  = torch.tensor(list(var_dict.values())).float().to(self.device)
+        #self.class_mean = torch.tensor(list(mean_dict.values())).float().to(self.device)
+        #self.class_var  = torch.tensor(list(var_dict.values())).float().to(self.device)
 
         # self.class_mean_no_inv = torch.tensor(list(mean_dict_no_inv.values())).float().to(self.device)
         # self.class_var_no_inv  = torch.tensor(list(var_dict_no_inv.values())).float().to(self.device)

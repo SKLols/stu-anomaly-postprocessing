@@ -25,7 +25,8 @@ class Mask4Former(nn.Module):
         num_labels,
     ):
         super().__init__()
-        self.backbone = hydra.utils.instantiate(backbone)
+        #self.backbone = hydra.utils.instantiate(backbone)
+        self.backbone = backbone
         self.num_queries = num_queries
         self.num_heads = num_heads
         self.num_decoders = num_decoders
